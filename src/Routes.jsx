@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import Search from './components/Search';
 
 const Routes = (
-  <Router>
+  <Router basename='/'>
     <div>
       <Route path="/" component={ Nav } />
       <Route exact path="/" component={ Home } />
