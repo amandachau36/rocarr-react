@@ -46,8 +46,9 @@ class LogIn extends Component {
   console.log(this.state.password);
 
   //make a post request to the backend, if user exists and password is correct
+    // 'http://localhost:3333/login',
   console.log('POST to /login');
-  axios.post('http://localhost:3333/login', {
+  axios.post('https://rocarr-backend.herokuapp.com/login', {
     email:   this.state.email,
     password: this.state.password
   })

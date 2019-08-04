@@ -49,7 +49,7 @@ class CreateUser extends Component {
 
     console.log({email});
 
-    axios.post('http://localhost:3333/user', { name, email, password, role
+    axios.post('https://rocarr-backend.herokuapp.com/user', { name, email, password, role
     }).then( res => {
       console.log(res);
 

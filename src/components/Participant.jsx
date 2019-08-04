@@ -46,7 +46,8 @@ class Participant extends Component {
   //Why are these colours off . . .
   getParticipantInfo = () => {
 
-    axios.get(`http://localhost:3333/participant/${this.props.match.params.id}`,
+    axios.get(`https://rocarr-backend.herokuapp.com/participant${this.props.match.params.id}`,
+      // `http://localhost:3333/participant/${this.props.match.params.id}`,
     {
           headers: {
             Authorization: "Bearer " + localStorage.getItem('token')
