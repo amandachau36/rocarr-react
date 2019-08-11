@@ -1,3 +1,52 @@
+# Return of Clinically Actionable Research Results (ROCARR)
+
+**Links:**
+* Back-end Node.s/Express/MongoDB repo: https://github.com/amandachau36/rocarr
+* Back-end hosted on https://rocarr-backend.herokuapp.com
+* Frontend React repo: https://github.com/amandachau36/rocarr-react
+* Website: https://amandachau36.github.io/rocarr-react/#/
+
+## Project 3 for GA's WDI
+
+**Goal:**  
+* To create a final project of your choice!
+
+**Main Features**
+* Prototype for the Garvan Institute - a CRM to track interactions between research participants & genetic counsellors. 
+* This full-stack application was created using MongoDB, Node.js/Express, React.
+* Complex queries on nested documents. When genetic counsellors log in, their dashboard will display a list of follow-up items that are assigned to them.
+* Genetic counsellors can add participants, contact logs and follow-up items.
+* Search research participants using regular expressions.
+* Authentication using Passport
+
+**Backend Tech used**
+* MongoDB
+* Node.js/Express
+* NPM packages: bcrypt, body-parser, cors, dotenv, jsonwebtoken, nodemon, passport, passport-jwt, passport-local
+* Deployed to Heroku and MongoDb Atlas
+
+**Frontend Tech used**
+* JavaScript
+* React 3.0.1
+* NPM packages: axios, react-router-dom, gh-pages    
+* HTML/CSS
+* Deployed to GH pages
+
+**List of bugs**
+* Design is not responsive
+* Bug in gh-pages 2.1., solved by downgrading gh-pages to 2.0
+
+**Future Features**
+* Live chat using socket.io-client
+* Authorisation for researchers, ROCARR genetic counsellors and ROCARR project evaluators
+* Dashboard with graphs for ROCARR evaluators  
+* Webpages with information for research participants (no login) and researchers.
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
