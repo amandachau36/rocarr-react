@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { BACKEND_URL } from '../config.js';
 
 
 class Search extends Component {
@@ -43,7 +44,7 @@ class Search extends Component {
 
   searchParticipants = () => {
 
-    axios.get(`http://localhost:3333/participants/search/${this.state.query}`,
+    axios.get(`${ BACKEND_URL }/participants/search/${this.state.query}`,
     {
           headers: {
             Authorization: "Bearer " + localStorage.getItem('token')

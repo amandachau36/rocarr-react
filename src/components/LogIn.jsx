@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
 import axios from 'axios';
-
+import { BACKEND_URL } from '../config.js'
 
 
 class LogIn extends Component {
@@ -48,7 +48,7 @@ class LogIn extends Component {
   //make a post request to the backend, if user exists and password is correct
     // 'http://localhost:3333/login',
   console.log('POST to /login');
-  axios.post('https://rocarr-backend.herokuapp.com/login', {
+  axios.post(`${ BACKEND_URL }/login`, {
     email:   this.state.email,
     password: this.state.password
   })

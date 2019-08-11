@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import AddContactLog from './AddContactLog';
+import { BACKEND_URL } from '../config.js';
 
 class Participant extends Component {
   constructor(){
@@ -46,7 +47,7 @@ class Participant extends Component {
   //Why are these colours off . . .
   getParticipantInfo = () => {
 
-    axios.get(`https://rocarr-backend.herokuapp.com/participant${this.props.match.params.id}`,
+    axios.get(`${ BACKEND_URL }/participant/${this.props.match.params.id}`,
       // `http://localhost:3333/participant/${this.props.match.params.id}`,
     {
           headers: {

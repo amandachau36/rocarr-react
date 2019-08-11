@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BACKEND_URL } from '../config.js'
 
 //https://reactjs.org/docs/forms.html
 
@@ -71,7 +72,7 @@ class AddContactLog extends Component {
     console.log({notes});
 
     axios.post(
-      `http://localhost:3333/participant/${this.props.studyId}/contact_log`,
+      `${ BACKEND_URL }/participant/${this.props.studyId}/contact_log`,
       {
         date, interactionType, interactionReason, interactionDuration, actionsTaken, documentsSentVia, documentsSent, notes, followUpRequired,
         actionsRequired: fActionsRequired,

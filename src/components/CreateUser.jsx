@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BACKEND_URL } from '../config.js';
 
 // let jwt;
 
@@ -49,7 +50,7 @@ class CreateUser extends Component {
 
     console.log({email});
 
-    axios.post('https://rocarr-backend.herokuapp.com/user', { name, email, password, role
+    axios.post(`${ BACKEND_URL }/user`, { name, email, password, role
     }).then( res => {
       console.log(res);
 

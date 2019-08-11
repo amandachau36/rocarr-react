@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { BACKEND_URL } from '../config.js';
 
 class DashBoard extends Component {
   constructor(){
@@ -26,7 +27,7 @@ class DashBoard extends Component {
   getFollowUp = () => {
 
   // get FollowUp list for the logged in User
-  axios.get('http://localhost:3333/participants/followup',
+  axios.get(`${ BACKEND_URL }/participants/followup`,
   {
         headers: {
           Authorization: "Bearer " + localStorage.getItem('token')
