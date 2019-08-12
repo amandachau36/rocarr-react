@@ -10,6 +10,7 @@ body {
 }
 
 input:focus {outline:0;}
+button:focus {outline:0;}
 
 a:hover{
   color: #4D00C7;
@@ -104,17 +105,11 @@ label[data-function*='swipe'] {
   left: 3%;
   z-index: 1;
   display: block;
-  /* width: 42px;
-  height: 42px; */
-  /* font: 42px fontawesome; */
-  /* text-align: center; */
-  /* color: #333; */
   cursor: pointer;
   transform: translate3d(0, 0, 0);
   transition: transform .3s;
 }
 label[data-function*='swipe']:hover {
-  /* color: #263249; */
   opacity: 0.6;
 }
 input[data-function*='swipe']:checked ~ label[data-function*='swipe'] {
@@ -401,7 +396,7 @@ transition: all 0.4s ease 0s;
 .search {
   margin-left: 2%;
   background-color: #DB3C00;
-  border-radius: 20px;
+  border-radius: 3px;
   color: white;
   width: 10%;
 }
@@ -419,8 +414,6 @@ transition: all 0.4s ease 0s;
   align-items: center;
   /* background-color: blue; */
 }
-
-
 
 .contact-log div {
   padding: 5%;
@@ -441,8 +434,6 @@ transition: all 0.4s ease 0s;
   position: absolute;
   right: 0;
   bottom: 15%;
-  background-color: #DB3C00;
-  color: white;
 }
 
 .participant-headers {
@@ -461,7 +452,7 @@ transition: all 0.4s ease 0s;
 
 .add-log {
   background-color: #E8E8E7;
-  padding: 1%;
+  padding: 2%;
   margin-bottom: 4%;
 }
 
@@ -494,6 +485,26 @@ transition: all 0.4s ease 0s;
   /* padding: 1% 0 1% 2%; */
 }
 
+position: absolute;
+right: 0;
+bottom: 15%;
 .two-cols-container label {
-  margin: 1%;
+  /* margin: 1%;
+  background-color */
+}
+
+.new-contact-log {
+  /* display: table-cell;
+  vertical-align: middle; */
+  /* vertical-align: top; */
+  /* background-color: pink; */
+
+  /* padding: 0.5em 0; */
+
+}
+
+.new-contact-log input{
+  /* background-color: pink; */
+  /* margin: 0.5em 0; */
+  /* padding: 0.5em 0; */
 }

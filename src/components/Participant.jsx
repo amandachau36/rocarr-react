@@ -124,7 +124,7 @@ class Participant extends Component {
       <div className="component">
         <div>{this.state.errorMessage}</div>
 
-        <h4 className="participant-headers">Participant profile</h4>
+        <h4 className="participant-headers">PARTICIPANT PROFILE</h4>
         <div className="profile">
           <p><strong>Study ID: </strong>{ id }</p>
           <p><strong>Name: </strong>{ name }</p>
@@ -132,8 +132,9 @@ class Participant extends Component {
           <p><strong>Phone: </strong>{ homePhone }</p>
           <p><strong>Research Study: </strong>{ researchStudy }</p>
         </div>
+        <br/>
 
-        <h4 className="participant-headers">Follow-up Required</h4>
+        <h4 className="participant-headers">FOLLOW-UP REQUIRED</h4>
         <div className="contact-log tableHeader">
           <div>Date Due</div>
           <div>Action Required</div>
@@ -176,9 +177,10 @@ class Participant extends Component {
           ))
         }
 
+        <br/>
         <div className="log">
-          <h4 className="participant-headers">Contact Log</h4>
-          <button onClick={this.openContactLogForm}>Add log</button>
+          <h4 className="participant-headers">CONTACT LOG</h4>
+          <button className="btn search" onClick={this.openContactLogForm}>ADD LOG</button>
         </div>
         <div>
           {

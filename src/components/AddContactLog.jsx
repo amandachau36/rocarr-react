@@ -33,7 +33,6 @@ class AddContactLog extends Component {
     // console.log(event, value, name);
 
     // Set values for all states without an array
-    // *** how does [name] work exactly?
     this.setState({
       [name]: value
     });
@@ -95,14 +94,8 @@ class AddContactLog extends Component {
     })
   } //createNewContactLog
 
-
-  // createdBy: {
-  //       email: 'jane@ga.co',
-  //       name: 'Jane',
-  //       role: 'Genetic Counsellor'
-  //     },
-
-// <h4>Add new contact log</h4>
+//
+// https://w3bits.com/css-floating-labels/
 
   render(){
     return(
@@ -114,54 +107,78 @@ class AddContactLog extends Component {
 
             <div className="two-cols-container">
               <div>
-                <label><strong> Date/time: </strong>
-                  <input type="datetime-local" name="date"
+                <label>
+                  <strong> Date and time: </strong>
+                </label>
+                <input type="datetime-local" name="date"
                     onChange={this.handleInputChange}/>
-                </label> <br/>
+                <br/>
+                <br/>
                 <label>
                   <strong>Type of interaction: </strong>
-                  <select name="interactionType" defaultValue="" onChange={this.handleInputChange}>
-                    <option value="" disabled>Select one</option>
-                    <option>email</option>
-                    <option>phone</option>
-                    <option>live chat</option>
-                  </select>
-                </label><br/>
-                <label> <strong>Reason for interaction: </strong>
-                  <select name="interactionReason" defaultValue="" onChange={this.handleInputChange}>
-                    <option value="" disabled>Select one</option>
-                    <option>Initial contact (by participant)</option>
-                    <option>Follow-up contact to discuss results</option>
-                    <option>Follow-up contact to discuss referral</option>
-                  </select>
-                </label><br/>
-                <label><strong>Interaction Duration (min): </strong>
-                  <input type="number" name="interactionDuration" onChange={this.handleInputChange}/>
-                </label><br/>
+                </label>
+                <br/>
+                <select name="interactionType" defaultValue="" onChange={this.handleInputChange}>
+                  <option value="" disabled>Select one</option>
+                  <option>email</option>
+                  <option>phone</option>
+                  <option>live chat</option>
+                </select>
+                <br/>
+                <br/>
+                <label>
+                  <strong>Reason for interaction: </strong>
+                </label>
+                <br/>
+                <select name="interactionReason" defaultValue="" onChange={this.handleInputChange}>
+                  <option value="" disabled>Select one</option>
+                  <option>Initial contact (by participant)</option>
+                  <option>Follow-up contact to discuss results</option>
+                  <option>Follow-up contact to discuss referral</option>
+                </select>
+                <br/>
+                <br/>
+                <label>
+                  <strong>Interaction duration (min): </strong>
+                </label>
+                  <input type="number" min="0" name="interactionDuration" onChange={this.handleInputChange}/>
+                <br/>
+                <br/>
               </div>
 
               <div>
-                <label><strong> Actions Taken: </strong>
-                  <select multiple name="actionsTaken" defaultValue={[]} onChange={this.handleMultipleInputChange}>
-                    <option value="" disabled>Select all actions taken</option>
-                    <option value='AT1'>Discussed research results</option>
-                    <option value='AT2'> Discussed family implications</option>
-                    <option value='AT3'>Discussed referral options</option>
-                    <option value='AT4'>Referred patient</option>
-                    <option value='AT5'>Followed-up on referral</option>
-                    <option value='AT6'>Discussed ROCARR</option>
-                  </select>
-                </label><br/>
-                <label><strong>Documents Sent Via: </strong>
-                  <select name="documentsSentVia" defaultValue="" onChange={this.handleInputChange}>
-                    <option value="" disabled>Select one</option>
-                    <option>none sent</option>
-                    <option>email</option>
-                    <option>mail</option>
-                    <option>fax</option>
-                  </select>
-                </label><br/>
-                <label><strong>Documents Sent: </strong>
+                <label>
+                  <strong> Actions taken: </strong>
+                </label>
+                <br/>
+                <select multiple name="actionsTaken" defaultValue={[]} onChange={this.handleMultipleInputChange}>
+                  <option value="" disabled>Select all actions taken</option>
+                  <option value='AT1'>Discussed research results</option>
+                  <option value='AT2'> Discussed family implications</option>
+                  <option value='AT3'>Discussed referral options</option>
+                  <option value='AT4'>Referred patient</option>
+                  <option value='AT5'>Followed-up on referral</option>
+                  <option value='AT6'>Discussed ROCARR</option>
+                </select>
+                <br/>
+                <br/>
+                <label>
+                  <strong>Documents sent via: </strong>
+                </label>
+                <br/>
+                <select name="documentsSentVia" defaultValue="" onChange={this.handleInputChange}>
+                  <option value="" disabled>Select one</option>
+                  <option>none sent</option>
+                  <option>email</option>
+                  <option>mail</option>
+                  <option>fax</option>
+                </select>
+                <br/>
+                <br/>
+                <label>
+                  <strong>Documents sent: </strong>
+                </label>
+                <br/>
                   <select multiple name="documentsSent" defaultValue={[]} onChange={this.handleMultipleInputChange}>
                     <option value="" disabled>Select all documents sent</option>
                     <option value='D1'>About ROCARR</option>
@@ -171,45 +188,64 @@ class AddContactLog extends Component {
                     <option value='D5'>Implications for you and your family</option>
                     <option value='D6'>Interpreting results</option>
                   </select>
-                  </label><br/>
+                <br/>
                 </div>
               </div>
-
-          <label> <strong>Notes: </strong>
-              <input type="text"
-              name="notes"
-              style={{height:5+'em', width: 100+'%'}}
-              onChange={this.handleInputChange}/>
-            </label><br/>
-          <label> <strong>Follow up required: </strong>
-              <input type="checkbox" name="followUpRequired" onChange={this.handleInputChange}/>
-            </label><br/>
-          <label><strong>Follow up actions required: </strong>
-              <select multiple name="fActionsRequired" defaultValue={[]} onChange={this.handleMultipleInputChange}>
-                <option value="" disabled>Select all follow-up actions required</option>
-                <option value='AR1'>Referral</option>
-                <option value='AR2'>Follow-up call</option>
-              </select>
-            </label><br/>
-          <label> <strong>Follow-up description: </strong>
-            <input type="text" name="fDescription" onChange={this.handleInputChange} />
-            </label><br/>
+              <br/>
+          <label>
+            <strong>Notes: </strong>
+          </label>
+          <input type="text"
+          name="notes"
+          style={{height:5+'em', width: 100+'%'}}
+          onChange={this.handleInputChange}/>
+          <br/>
+          <br/>
+          <label>
+            <strong>Follow up required: </strong>
+          </label>
+          <input type="checkbox" name="followUpRequired" onChange={this.handleInputChange}/>
+          <br/>
+          <label>
+            <strong>Follow up actions required: </strong>
+          </label>
+          <br/>
+          <select multiple name="fActionsRequired" defaultValue={[]} onChange={this.handleMultipleInputChange}>
+            <option value="" disabled>Select all follow-up actions required</option>
+            <option value='AR1'>Referral</option>
+            <option value='AR2'>Follow-up call</option>
+          </select>
+          <br/>
+          <br/>
+          <label>
+            <strong>Follow-up description: </strong>
+          </label>
+          <input type="text" name="fDescription" style={{height:5+'em', width: 100+'%'}} onChange={this.handleInputChange} />
+          <br/>
+          <br/>
           <label> <strong>Follow up due: </strong>
             <input type="datetime-local" name="fDateDue"
               onChange={this.handleInputChange}/>
-            </label><br/>
-            <label>
+          </label>
+          <br/>
+          <br/>
+          <label>
             <strong>Assign follow-up to: </strong>
+          </label>
             <select name="fAssignTo" defaultValue="" onChange={this.handleInputChange}>
               <option value="" disabled>Select one</option>
-              <option value="jane@ga.co">jane</option>
-              <option value="Ruby@ga.co">Ruby</option>
+              <option value="jane@ga.co">Jane</option>
+              <option value="ruby@ga.co">Ruby</option>
             </select>
-            </label><br/>
-          <label> <strong>Assign to all Genetic Counsellors: </strong>
-              <input type="checkbox" name="fOpenAssignment" onChange={this.handleInputChange}/>
-            </label><br/>
-          <input type="submit" value="Add contact log"/>
+          <br/>
+          <br/>
+          <label>
+            <strong>Assign to all Genetic Counsellors: </strong>
+          </label>
+          <input type="checkbox" name="fOpenAssignment" onChange={this.handleInputChange}/>
+          <br/>
+          <br/>
+          <input className="btn search" type="submit" value="SUBMIT"/>
           </form>
         </div>
       </div>
