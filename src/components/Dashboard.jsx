@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { BACKEND_URL } from '../config.js';
+import { BACKEND_URL } from '../config.js'
 
 class DashBoard extends Component {
   constructor(){
@@ -68,24 +68,24 @@ class DashBoard extends Component {
             });
 
             followUps.push(
-              (<div key={participant._id} className="threeColGrid">
-                <Link to={`/participant/${participant.id}`}>
-                  <div className="followName">{ participant.name }</div>
-                </Link>
-                <Link to={`/participant/${participant.id}`}>
+              (<Link to={`/participant/${participant.id}`}>
+                <div key={participant._id} className="threeColGrid gridRow">
+                  <div className="followName">
+                    { participant.name }
+                  </div>
                   <div className="followActions">
-                  {
-                    log.followUp.actionsRequired.map( a => (
-                      <div key={ a }>{ this.actionsRequiredLookup[a] }</div>
-                    ))
-                  }
+                    {
+                      log.followUp.actionsRequired.map( a => (
+                        <div key={ a }>{ this.actionsRequiredLookup[a] }</div>
+                      ))
+                    }
                   </div>
-                  </Link>
-                  <Link to={`/participant/${participant.id}`}>
-                  <div className="followDate">{ dateFormatted }
+                  <div className="followDate">
+                    { dateFormatted }
                   </div>
-                  </Link>
-              </div>)
+
+              </div>
+              </Link>)
             );
           }
         }
@@ -107,7 +107,8 @@ class DashBoard extends Component {
 
     return(
       <div className="component dashboard">
-        <h1>DashBoard</h1>
+        <h1>Dashboard</h1>
+        <h3>My Follow-up List</h3>
         <div>{this.state.errorMessage}</div>
 
         <div className="threeColGrid tableHeader">
