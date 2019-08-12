@@ -92,6 +92,9 @@ this doesn't work
   background-color: #F5F3F1;
 }
 
+.homepage {
+  margin: 4% auto;
+}
 
 .threecol {
   width: 30%;
@@ -136,7 +139,7 @@ this doesn't work
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  height: 20vh;
+  height: 16vh;
   /* flex-wrap: wrap; */
 }
 .contact-us-left {
