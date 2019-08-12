@@ -20,7 +20,7 @@ class Nav extends Component {
         <nav className='nav-bar'>
             <div className='nav-left'>
               <a href="https://www.garvan.org.au/">
-                <img className="logo" src={process.env.PUBLIC_URL + '/images/garvan.png'} />
+                <img alt="garvan-logo" className="logo" src={process.env.PUBLIC_URL + '/images/garvan.png'} />
               </a>
               <div className="rocarr-url">
                 <Link to="/">ROCARR</Link>

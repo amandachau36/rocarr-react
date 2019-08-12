@@ -68,8 +68,8 @@ class DashBoard extends Component {
             });
 
             followUps.push(
-              (<Link to={`/participant/${participant.id}`}>
-                <div key={participant._id} className="threeColGrid gridRow">
+              (<Link to={`/participant/${participant.id}`}  key={participant._id}>
+                <div className="threeColGrid gridRow">
                   <div className="followName">
                     { participant.name }
                   </div>
