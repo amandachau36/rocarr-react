@@ -9,6 +9,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+a:hover{
+  color: #4D00C7;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  /* vertical-align: top; */
+
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -352,17 +364,4 @@ label {
 
 .two-cols-container label {
   margin: 1%;
-}
-
-
-a {
-  color: black;
-  text-decoration: none;
-  /* vertical-align: top; */
-
-}
-
-
-a:hover{
-  /* color: #4D00C7; */
 }
