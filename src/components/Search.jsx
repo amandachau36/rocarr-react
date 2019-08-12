@@ -67,10 +67,12 @@ class Search extends Component {
       <div className="component">
         <form onSubmit={ this.searchParticipants }>
           <label><h2> Find Participant </h2><br/>
-            <input type="text" placeholder="Enter first or last name" onChange={ this.handleInputChange } ></input>
-            <input type="submit" value="Search"></input>
+            <input type="text" placeholder="Enter first or last name" className="search-input" onChange={ this.handleInputChange } ></input>
+            <input type="submit" value="Search" className="search btn"></input>
           </label>
         </form>
+        <br/>
+        <br/>
         {
         this.state.participants.length > 0
         ?

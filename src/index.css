@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input:focus {outline:0;}
 
 a:hover{
   color: #4D00C7;
@@ -18,7 +19,6 @@ a {
   color: black;
   text-decoration: none;
   /* vertical-align: top; */
-
 }
 
 code {
@@ -133,17 +133,7 @@ input[data-function*='swipe']:checked ~ label:nth-child(2){
 input[data-function*='swipe']:checked ~ label:nth-child(3){
   display: none;
 }
-/* .headings {
-  flex: 1;
-  padding: 80px 30px;
-  background: #eee;
-  box-shadow: 0 0 5px black;
-  transform: translate3d(0, 0, 0);
-  transition: transform .3s;
-} */
-/* input[data-function*='swipe']:checked ~ .headings {
-  transform: translate3d(280px, 0px, 0px);
-} */
+
 input[data-function*='swipe']:checked ~ .sidebar {
   transform: translate3d(0px, 0px, 0px);
 }
@@ -169,8 +159,6 @@ input[data-function*='swipe']:checked ~ .sidebar .menu li {
   color: #fff;
   border: 2px solid #fff;
   text-align: center;
-  /* font-size: 18px; */
-  /* font-weight: 900; */
   display: block;
   text-decoration: none;
   padding: 3%;
@@ -178,16 +166,16 @@ input[data-function*='swipe']:checked ~ .sidebar .menu li {
   border-radius: 2px;
 }
 
+.menu li:hover {
+    background-color: rgba(77,0,199, 0.5);
+}
+
+
 /* End code by webdevtrick */
 
 
 
 
-
-
-
-.side-nav {
-}
 
 .rocarr-url {
   display: inline-block;
@@ -217,7 +205,6 @@ input[data-function*='swipe']:checked ~ .sidebar .menu li {
 
 .login {
   width: 50%;
-  /* margin: 15% auto; */
   padding: 3% 5%;
   background-color: rgba(198, 195, 193, 0.8);
   position: relative;
@@ -343,6 +330,7 @@ input[data-function*='swipe']:checked ~ .sidebar .menu li {
   border-radius: 2px;
   padding: 0.5em;
   border: none;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -392,11 +380,31 @@ transition: all 0.4s ease 0s;
 .chat {
  background-color: #DB3C00;
  color: white;
+}
+
+.search-input {
+  /* text-align: center; */
+  display: inline-block;
+  font-size: 100%;
+  /* font-weight: 800; */
+  cursor: pointer;
+  width: 30%;
+  border-radius: 20px;
+  padding: 0.5em;
+  border: none;
+  border: 1px solid black;
+  width: 45%;
 
 
 }
 
-
+.search {
+  margin-left: 2%;
+  background-color: #DB3C00;
+  border-radius: 20px;
+  color: white;
+  width: 10%;
+}
 
 
 .contact-log {
@@ -458,12 +466,6 @@ transition: all 0.4s ease 0s;
 }
 
 
-label {
-  /* display: inline-block;
-  width: 47%;
-  padding: 1%;
-   text-align: right; */
-}
 
 .five-col {
   display: grid;
