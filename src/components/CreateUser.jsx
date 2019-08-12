@@ -74,34 +74,32 @@ class CreateUser extends Component {
 
   render(){
     return(
-      <div className="login component">
-        <h3>Create a new account</h3>
-
-
-        <p style={{color: 'red'}}>{this.state.errorMessage}</p>
-
-
-
-        <form onSubmit={ this.handleSubmit }>
-          <label> Name
-            <input type="text" name="name" onChange={ this.handleInputChange }></input>
-          </label><br/>
-          <label> Email
-            <input type="text" name="email" onChange={ this.handleInputChange }></input>
-          </label><br/>
-          <label> Password
-            <input type="password" name="password" onChange={ this.handleInputChange }></input>
-          </label><br/>
-          <label> What is your role?
-            <select name="role" defaultValue="" onChange={this.handleInputChange}>
-              <option value="" disabled>Select one</option>
-              <option>Genetic Counsellor</option>
-              <option>ROCARR Evaluator</option>
-              <option>Researcher</option>
-            </select>
-          </label><br/>
-          <input type="submit" value="Create new account"></input>
-        </form>
+      <div className="log-in-background">
+        <div className="login">
+          <div style={{color: 'red'}}>
+            {this.state.errorMessage}
+          </div>
+          <form onSubmit={ this.handleSubmit }>
+            <input className="log-in-form" type="text" name="name" placeholder="Full Name" onChange={ this.handleInputChange }></input>
+            <br/>
+            <input className="log-in-form" type="text" name="email" placeholder="Email" onChange={ this.handleInputChange }></input>
+            <br/>
+            <input className="log-in-form" type="password" name="password" placeholder="Password" onChange={ this.handleInputChange }></input>
+            <br/>
+            <div className="role">
+              <label> What is your role? &nbsp;
+                <select name="role" defaultValue=""  onChange={this.handleInputChange}>
+                  <option value="" disabled>Select one</option>
+                  <option>Genetic Counsellor</option>
+                  <option>ROCARR Evaluator</option>
+                  <option>Researcher</option>
+                </select>
+              </label>
+            </div>
+            <br/>
+            <input type="submit" value="REGISTER" className="small-btn submit"></input>
+          </form>
+        </div>
 
       </div>
     )
