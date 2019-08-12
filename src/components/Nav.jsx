@@ -29,10 +29,6 @@ class Nav extends Component {
             {localStorage.getItem('token')
             ?
               <div className="nav-btns">
-                <div className="small-btn">
-                  <Link to="/search">SEARCH </Link>
-                </div>
-
                 <div className="small-btn" onClick={this.logOut}>
                  SIGN OUT
                 </div>

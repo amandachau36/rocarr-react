@@ -28,7 +28,7 @@ code {
 
 
 .component {
-  padding: 1%;
+  padding: 3% 3%;
   /* margin: 1.6% */
   /* background-color: blue; */
 }
@@ -77,12 +77,116 @@ code {
   /* background-color: pink; */
   display: inline-block;
   padding-left: 2%;
-
-  /* padding-top: 1%; */
-  /* font-weight: bold; */
   height: 100%;
 
 
+}
+
+
+
+
+
+
+/* Code By Webdevtrick ( https://webdevtrick.com ) */
+/* with several modications */
+
+.container {
+  display: flex;
+  min-height: 100%;
+}
+input[data-function*='swipe'] {
+  position: absolute;
+  opacity: 0;
+}
+label[data-function*='swipe'] {
+  position: absolute;
+  top: 8vh;
+  left: 3%;
+  z-index: 1;
+  display: block;
+  /* width: 42px;
+  height: 42px; */
+  /* font: 42px fontawesome; */
+  /* text-align: center; */
+  /* color: #333; */
+  cursor: pointer;
+  transform: translate3d(0, 0, 0);
+  transition: transform .3s;
+}
+label[data-function*='swipe']:hover {
+  /* color: #263249; */
+  opacity: 0.6;
+}
+input[data-function*='swipe']:checked ~ label[data-function*='swipe'] {
+  transform: translate3d(280px, 0, 0);
+}
+label[data-function*='swipe']:checked {
+  display: block;
+}
+label:nth-child(2){
+  display: none;
+}
+input[data-function*='swipe']:checked ~ label:nth-child(2){
+  display: block;
+  transform: translate3d(280px, 0px, 0px);
+}
+input[data-function*='swipe']:checked ~ label:nth-child(3){
+  display: none;
+}
+/* .headings {
+  flex: 1;
+  padding: 80px 30px;
+  background: #eee;
+  box-shadow: 0 0 5px black;
+  transform: translate3d(0, 0, 0);
+  transition: transform .3s;
+} */
+/* input[data-function*='swipe']:checked ~ .headings {
+  transform: translate3d(280px, 0px, 0px);
+} */
+input[data-function*='swipe']:checked ~ .sidebar {
+  transform: translate3d(0px, 0px, 0px);
+}
+input[data-function*='swipe']:checked ~ .sidebar .menu li {
+  width: 100%;
+}
+.sidebar {
+  transform: translate3d(-280px, 0px, 0px);
+  position: absolute;
+  width: 280px;
+  background: rgba(	10, 10, 10, 0.94);
+  color: #eee;
+  left: 0;
+  height: 100%;
+  transition: all .3s;
+}
+.menu li {
+  padding: 3%;
+  list-style: none;
+  width: 0%;
+}
+.menu li a {
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  /* font-size: 18px; */
+  /* font-weight: 900; */
+  display: block;
+  text-decoration: none;
+  padding: 3%;
+  margin: 0 20px;
+  border-radius: 2px;
+}
+
+/* End code by webdevtrick */
+
+
+
+
+
+
+
+.side-nav {
 }
 
 .rocarr-url {
@@ -96,11 +200,8 @@ code {
 
 }
 
-
-
 .nav-right {
   width: 50%;
-  /* background-color: yellow; */
   display: inline-block;
   text-align: right;
 
@@ -110,10 +211,9 @@ code {
   height: 100%;
 }
 
-.nav-right div {
-  /* height: 100%; */
-  /* margin: auto; */
-}
+
+
+
 
 .login {
   width: 50%;

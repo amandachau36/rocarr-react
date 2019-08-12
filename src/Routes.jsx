@@ -15,7 +15,7 @@ const Routes = (
   <Router basename='/'>
     <div>
       <Route path="/" component={ Nav } />
-      <Route path="/" component={ SideNav } /> 
+      <Route path="/" component={ SideNav } />
       <Route exact path="/" component={ Home } />
       <Route exact path="/participant/:id/contact_log" component={ AddContactLog } />
       <Route exact path="/login" component={ LogIn } />
@@ -23,7 +23,7 @@ const Routes = (
       <Route exact path="/create_account" component={ CreateUser } />
       <Route exact path="/participant/:id" component={ Participant } />
       <Route exact path="/search" component={ Search } />
-      <Route exact path="/" component={ Footer } />
+      <Route path="/" component={ Footer } />
     </div>
   </Router>
 )
