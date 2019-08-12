@@ -16,10 +16,14 @@ code {
 
 
 .component {
-  padding: 2%;
+  padding: 1%;
+  /* margin: 1.6% */
   /* background-color: blue; */
 }
 
+.header {
+  margin-left: 1.6%;
+}
 
 .threeColGrid {
   display: grid;
@@ -90,16 +94,37 @@ this doesn't work
 
 
 .threecol {
-  width: 33.3%;
-  padding: 2%;
+  width: 30%;
+  margin: 1.6%;
   display: inline-block;
   vertical-align: top;
+  background-color: #F5F3F1;
+  -webkit-box-shadow: 6px 6px 14px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 6px 14px -5px rgba(0,0,0,0.75);
+  box-shadow: 6px 6px 14px -5px rgba(0,0,0,0.75);
+  border-radius: 2px;
+  border-radius: 0 25% 3% 3%;
+}
+
+.threecol:hover {
+  opacity: 0.8;
 }
 
 .threecol img {
   width: 100%;
+  border-radius: 0 25% 0 30%;
   /* max-height: 7em; */
+}
 
+.threecol-description {
+  padding: 2%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .threecol {
+    width: 96%;
+  }
 }
 
 .smaller-font {
@@ -111,14 +136,16 @@ this doesn't work
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  height: 20vh;
   /* flex-wrap: wrap; */
 }
 .contact-us-left {
   width: 60%;
   /* display: inline-block; */
-  padding-left: 3%;
+  padding-left: 10%;
   background-color: #4D00C7;
   color: white;
+  margin: auto 0;
 
 }
 
@@ -136,11 +163,36 @@ this doesn't work
  /* display: inline; */
 }
 
-.contact-us-right :first-child {
+.btn {
+  text-align: center;
+  display: inline-block;
+  font-size: 100%;
+  font-weight: 800;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 2px;
+  padding: 0.5em;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.email {
+  background-color: #F5F3F1;
+}
+
+
+
+.chat {
  background-color: #DB3C00;
  color: white;
- /* display: inline; */
+  /* border: 0.2em solid #DB3C00; */
+
 }
+
+
 
 
 .contact-log {

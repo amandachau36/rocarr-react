@@ -77,11 +77,11 @@ class Footer extends Component {
             :
             <div className="contact-us">
               <div className="contact-us-left">
-                <p>Speak with a Genetic Counsellor now <br/> Call 1-800-222-7777</p>
+                <h3>Speak with a Genetic Counsellor now <br/> Call 1-800-222-7777</h3>
               </div>
               <div className="contact-us-right">
-                <button className="chat" onClick={this.startChat}>Live Chat</button>
-                <button>Email Us</button>
+                <button className="chat btn" onClick={this.startChat}>LIVE CHAT</button>
+                <button className="email btn" >EMAIL US</button>
               </div>
            </div>
 
