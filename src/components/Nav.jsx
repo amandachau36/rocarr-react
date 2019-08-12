@@ -28,14 +28,18 @@ class Nav extends Component {
             </div><div className='nav-right'>
             {localStorage.getItem('token')
             ?
-              <div>
-                <Link to="/search">SEARCH </Link>
+              <div className="nav-btns">
+                <div className="small-btn">
+                  <Link to="/search">SEARCH </Link>
+                </div>
 
-                <button onClick={this.logOut}>SIGN OUT</button>
+                <div className="small-btn" onClick={this.logOut}>
+                 SIGN OUT
+                </div>
 
               </div>
               :
-              <div clName="nav-btns">
+              <div className="nav-btns">
                 <div className="small-btn">
                   <Link to="/create_account">REGISTER</Link>
                 </div>
