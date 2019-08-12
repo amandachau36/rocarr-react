@@ -454,6 +454,8 @@ transition: all 0.4s ease 0s;
   background-color: #E8E8E7;
   padding: 2%;
   margin-bottom: 4%;
+  position: relative;
+
 }
 
 
@@ -485,9 +487,12 @@ transition: all 0.4s ease 0s;
   /* padding: 1% 0 1% 2%; */
 }
 
-position: absolute;
-right: 0;
-bottom: 15%;
+.add {
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+}
+
 .two-cols-container label {
   /* margin: 1%;
   background-color */

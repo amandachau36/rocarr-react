@@ -206,46 +206,66 @@ class AddContactLog extends Component {
           </label>
           <input type="checkbox" name="followUpRequired" onChange={this.handleInputChange}/>
           <br/>
-          <label>
-            <strong>Follow up actions required: </strong>
-          </label>
           <br/>
-          <select multiple name="fActionsRequired" defaultValue={[]} onChange={this.handleMultipleInputChange}>
-            <option value="" disabled>Select all follow-up actions required</option>
-            <option value='AR1'>Referral</option>
-            <option value='AR2'>Follow-up call</option>
-          </select>
-          <br/>
-          <br/>
-          <label>
-            <strong>Follow-up description: </strong>
-          </label>
-          <input type="text" name="fDescription" style={{height:5+'em', width: 100+'%'}} onChange={this.handleInputChange} />
-          <br/>
-          <br/>
-          <label> <strong>Follow up due: </strong>
-            <input type="datetime-local" name="fDateDue"
-              onChange={this.handleInputChange}/>
-          </label>
-          <br/>
-          <br/>
-          <label>
-            <strong>Assign follow-up to: </strong>
-          </label>
-            <select name="fAssignTo" defaultValue="" onChange={this.handleInputChange}>
-              <option value="" disabled>Select one</option>
-              <option value="jane@ga.co">Jane</option>
-              <option value="ruby@ga.co">Ruby</option>
+
+          {
+          this.state.followUpRequired
+          ?
+          <div>
+            <label>
+              <strong>Follow up actions required: </strong>
+            </label>
+            <br/>
+            <select multiple name="fActionsRequired" defaultValue={[]} onChange={this.handleMultipleInputChange}>
+              <option value="" disabled>Select all follow-up actions required</option>
+              <option value='AR1'>Referral</option>
+              <option value='AR2'>Follow-up call</option>
             </select>
+            <br/>
+            <br/>
+            <label>
+              <strong>Follow-up description: </strong>
+            </label>
+            <input type="text" name="fDescription" style={{height:5+'em', width: 100+'%'}} onChange={this.handleInputChange} />
+            <br/>
+            <br/>
+            <label> <strong>Follow up due: </strong>
+              <input type="datetime-local" name="fDateDue"
+                onChange={this.handleInputChange}/>
+            </label>
+
+            <br/>
+            <br/>
+            <label>
+              <strong>Assign to all Genetic Counsellors: </strong>
+            </label>
+            <input type="checkbox" name="fOpenAssignment" onChange={this.handleInputChange}/>
+            <br/>
+            <br/>
+            { this.state.fOpenAssignment
+              ?
+              null
+              :
+              <div>
+                <label>
+                  <strong>Assign follow-up to: </strong>
+                </label>
+                <select name="fAssignTo" defaultValue="" onChange={this.handleInputChange}>
+                  <option value="" disabled>Select one</option>
+                  <option value="jane@ga.co">Jane</option>
+                  <option value="ruby@ga.co">Ruby</option>
+                </select>
+              </div>
+            }
+          </div>
+
+
+          : null
+          }
+
           <br/>
           <br/>
-          <label>
-            <strong>Assign to all Genetic Counsellors: </strong>
-          </label>
-          <input type="checkbox" name="fOpenAssignment" onChange={this.handleInputChange}/>
-          <br/>
-          <br/>
-          <input className="btn search" type="submit" value="SUBMIT"/>
+          <input className="btn search add" type="submit" value="SUBMIT"/>
           </form>
         </div>
       </div>
