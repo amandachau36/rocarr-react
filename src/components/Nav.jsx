@@ -22,23 +22,26 @@ class Nav extends Component {
               <a href="https://www.garvan.org.au/">
                 <img className="logo" src={process.env.PUBLIC_URL + '/images/garvan.png'} />
               </a>
-              <div>
+              <div className="rocarr-url">
                 <Link to="/">ROCARR</Link>
               </div>
             </div><div className='nav-right'>
             {localStorage.getItem('token')
             ?
               <div>
-                <Link to="/search">Search </Link>
+                <Link to="/search">SEARCH </Link>
 
-                <button onClick={this.logOut}>Log out</button>
+                <button onClick={this.logOut}>SIGN OUT</button>
 
               </div>
               :
-              <div>
-                <Link to="/create_account">Create account  </Link>
-                |
-                <Link to="/login">  Log in</Link>
+              <div clName="nav-btns">
+                <div className="small-btn">
+                  <Link to="/create_account">REGISTER</Link>
+                </div>
+                <div className="small-btn">
+                  <Link to="/login">SIGN IN</Link>
+                </div>
               </div>
             }
           </div>

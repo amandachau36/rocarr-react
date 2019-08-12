@@ -40,15 +40,20 @@ code {
 
 
 .nav-bar {
-  display: block;
+  display: flex;
   /* background-color: orange; */
+  /* position: fixed; */
   width: 100vw;
-  height: 40px;
+  height: 8vh;
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+
 }
 
 .logo {
-  max-height: 2em;
-  margin-right: 4%;
+  height: 90%;
+  margin: 0.5% 2% 0.5% 0;
 }
 
 
@@ -57,32 +62,56 @@ code {
   /* background-color: pink; */
   display: inline-block;
   padding-left: 2%;
-  padding-top: 1%;
-  font-weight: bold;
+
+  /* padding-top: 1%; */
+  /* font-weight: bold; */
+  height: 100%;
+
 
 }
 
-.nav-left div {
+.rocarr-url {
   display: inline-block;
-  /* padding-bottom: 3%; */
+  font-weight: bold;
+  height: 100%;
+  vertical-align: top;
+  padding-top: 4%;
+  padding-left: 2%;
+  font-size: 1.2em;
+
 }
 
-/* .nav-rocarr {
-this doesn't work
-  vertical-align: middle;
-} */
+
 
 .nav-right {
   width: 50%;
   /* background-color: yellow; */
   display: inline-block;
   text-align: right;
-  padding-right: 2%;
-  padding-top: 1%;
+
+
+  /* position: relative; */
+
+  /* position: relative; */
+  /* padding-right: 2%;
+  padding-top: 1%; */
+}
+
+.nav-btns{
+  height: 100%;
+
+
+  /* position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%); */
+  /* height: 100%;
+  vertical-align: middle; */
+  /* margin: auto; */
 }
 
 .nav-right div {
-  padding-left: 2%;
+  /* height: 100%; */
+  /* margin: auto; */
 }
 
 .login {
@@ -144,7 +173,7 @@ this doesn't work
 }
 .contact-us-left {
   width: 60%;
-  /* display: inline-block; */
+
   padding-left: 10%;
   background-color: #4D00C7;
   color: white;
@@ -155,15 +184,14 @@ this doesn't work
 .contact-us-right {
   margin: auto;
   width: 40%;
-  /* display: inline-block; */
-  /* height: 100%; */
+
   background-color: #4D00C7;
 
 }
 
 .contact-us-right button {
  margin: 3%;
- /* display: inline; */
+
 }
 
 .btn {
@@ -182,16 +210,47 @@ this doesn't work
   opacity: 0.8;
 }
 
+.small-btn {
+  text-align: center;
+  display: inline-block;
+  font-size: 90%;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 0.5em;
+  border: 3px solid #4D00C7;
+  background-color: none;
+
+  white-space: nowrap;
+  margin: 2% 3%;
+  transition: all 0.4s ease 0s;
+
+}
+
+.small-btn a {
+  color: black;
+}
+
+.small-btn:hover {
+color: white;
+background: #4D00C7;
+border-color: #4D00C7;
+transition: all 0.4s ease 0s;
+}
+
 .email {
   background-color: #F5F3F1;
 }
 
+.small-btn a:hover {
+  color: white;
+}
 
 
 .chat {
  background-color: #DB3C00;
  color: white;
-  /* border: 0.2em solid #DB3C00; */
+
 
 }
 
@@ -305,5 +364,5 @@ a {
 
 
 a:hover{
-  color: #4D00C7;
+  /* color: #4D00C7; */
 }
