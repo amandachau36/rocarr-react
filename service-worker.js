@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/rocarr-react/precache-manifest.304bcc84fda86a70eb6586312b79f7c6.js"
+  "/rocarr-react/precache-manifest.f3a979c6698b22e69152073e6917ceac.js"
 );
 
 self.addEventListener('message', (event) => {
