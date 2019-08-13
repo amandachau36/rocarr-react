@@ -205,13 +205,15 @@ class AddContactLog extends Component {
             <strong>Follow up required: </strong>
           </label>
           <input type="checkbox" name="followUpRequired" onChange={this.handleInputChange}/>
-          <br/>
-          <br/>
+
+
 
           {
           this.state.followUpRequired
           ?
           <div>
+            <br/>
+            <br/>
             <label>
               <strong>Follow up actions required: </strong>
             </label>
@@ -242,6 +244,7 @@ class AddContactLog extends Component {
             <input type="checkbox" name="fOpenAssignment" onChange={this.handleInputChange}/>
             <br/>
             <br/>
+
             { this.state.fOpenAssignment
               ?
               null
@@ -260,11 +263,12 @@ class AddContactLog extends Component {
           </div>
 
 
+
           : null
           }
+          <br/>
+          <br/>
 
-          <br/>
-          <br/>
           <input className="btn search add" type="submit" value="SUBMIT"/>
           </form>
         </div>
